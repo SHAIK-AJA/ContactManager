@@ -1,0 +1,23 @@
+﻿@model ContactManager.Models.Contact;
+<h3>Add New Contact</h3>
+<form asp-action="Create" method="post">
+    <label>Enter First Name</label>
+    <input  type="text" asp-for="FirstName" placeholder="GivenName" required/>
+    <br />
+    <label>Enter Sur Name</label>
+    <input type="text" asp-for="SurName" placeholder="SurName" />
+    <br />
+    <label>Enter Phone Number</label>
+    <input  type="tel" asp-for="PhoneNumber" placeholder="Phone Number" required/>
+    <br />
+    <label> Enter Email ID</label>
+    <input  type="email" asp-for="Gmail" placeholder="Gmail" required/>
+    <br />
+    <label>Enter Company</label>
+    <input  type="text" asp-for="Company" placeholder="Company"/>
+    <br />
+    <label>Enter Notes</label>
+   <textarea   asp-for="Notes"></textarea>
+   <br />
+   <button type="submit">Save Contact</button>
+</form>

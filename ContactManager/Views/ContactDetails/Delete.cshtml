@@ -1,0 +1,15 @@
+﻿@model ContactManager.Models.Contact;
+<h3>Delete this contact </h3>
+<p>Are you sure to want to delete this contact</p>
+<p><strong>@Model.FirstName</strong></p>
+<form asp-action="Delete" method="post">
+    <input type="hidden"  asp-for="Id"/>
+    <dl>@Model.FirstName</dl>
+    <dl>@Model.SurName</dl>
+    <dl>@Model.PhoneNumber</dl>
+    <dl>@Model.Gmail</dl>
+    <dl>@Model.Company</dl>
+    <dl>@Model.Notes</dl>
+    <button type="submit"> Delete</button>
+    <a href="/ContactDetails/Index"> Cancel</a>
+</form>

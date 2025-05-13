@@ -1,0 +1,11 @@
+﻿@model ContactManager.Models.Contact
+<h3>View  Contact Details</h3>
+<dl> 
+    <p><strong> First Name:</strong>@Model.FirstName</p>
+    <p><strong> Last Name:</strong>@Model.SurName</p>
+    <p><strong>Phone Number:</strong>@Model.PhoneNumber</p>
+    <p><strong>Email Id:</strong>@Model.Gmail</p>
+    <p><strong>Company:</strong>@Model.Company</p>
+    <p><strong>Notes:</strong>@Model.Notes</p>
+</dl>
+<a asp-controller="ContactDetails" asp-action="DownloadPdf" asp-route-id="@Model.Id">Download as PDF</a>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ContactManager.Models.Contact>
+<h1>Contact List</h1>
+<p><a href="ContactDetails/Create">Add a New Contact</a></p>
+<table>
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>SurName</th>
+            <th>Phone Number</th>
+            <th>Gmail</th>
+            <th>Company</th>
+            <th>Notes</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.FirstName</td>
+                <td>@i.SurName</td>
+                <td>@i.PhoneNumber</td>
+                <td>@i.Gmail</td>
+                <td>@i.Company</td>
+                <td>@i.Notes</td>
+                <td>
+                    <a href="/ContactDetails/Edit/@i.Id">Edit     | </a>
+                    <a href="/ContactDetails/Details/@i.Id">Details     | </a>
+                    <a href="/ContactDetails/Delete/@i.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
